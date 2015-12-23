@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:id="@+id/speaker_card_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginTop="6dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="2dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:paddingRight="18dp"
+        android:paddingLeft="18dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp">
+
+        <com.facebook.drawee.view.GenericDraweeView
+            android:id="@+id/speaker_card_profile_picture"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+
+            />
+
+        <TextView
+            android:id="@+id/speaker_card_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@id/speaker_card_profile_picture"
+            android:layout_toRightOf="@id/speaker_card_profile_picture"
+            android:text="@string/speaker_name"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/speaker_card_twitter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/speaker_twitter"
+            android:textSize="15sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/speaker_card_name"
+            android:layout_toEndOf="@id/speaker_card_profile_picture"
+            android:layout_toRightOf="@id/speaker_card_profile_picture"/>
+
+        <ImageView
+            android:id="@+id/speaker_card_favourite"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/favourite_full"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

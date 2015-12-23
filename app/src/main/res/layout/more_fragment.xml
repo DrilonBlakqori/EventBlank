@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:elevation="8dp"
+        android:id="@+id/more_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_tab_height"
+        android:background="?attr/colorPrimary">
+
+
+        <TextView
+            style="@style/ToolbarText"
+            android:id="@+id/more_header_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_margin="13.5dp"
+            android:text="@string/more_fragment" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:overScrollMode="never"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/schedule_card1"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                card_view:cardElevation="4dp"
+                android:layout_marginBottom="13dp"
+                android:layout_marginTop="13dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/card_header_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/event_information"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginBottom="3dp"
+                        android:textStyle="bold"
+                        android:textColor="#444"
+                        android:textSize="12sp"
+                        android:typeface="sans" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp">
+
+                        <TextView
+                            android:id="@+id/card_about"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:text="@string/about"
+                            android:textColor="#444"
+                            android:textSize="17sp"
+                            android:drawablePadding="20dp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginEnd="9dp"
+                            android:layout_marginRight="9dp"
+                            android:background="#A9A9A9"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/card_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:text="@string/code_of_conduct"
+                            android:textColor="#444"
+                            android:textSize="17sp"
+                            android:drawablePadding="20dp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginEnd="9dp"
+                            android:layout_marginRight="9dp"
+                            android:background="#A9A9A9" />
+
+                        <TextView
+                            android:id="@+id/card_sponsors"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:text="@string/sponsors"
+                            android:textColor="#444"
+                            android:textSize="17sp"
+                            android:layout_marginBottom="10dp"
+                            android:drawablePadding="20dp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/schedule_card2"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                card_view:cardElevation="4dp"
+                android:layout_marginBottom="20dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/card_header_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CREDITS"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginBottom="3dp"
+                        android:textStyle="bold"
+                        android:textColor="#444"
+                        android:textSize="12sp"
+                        android:typeface="sans" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp">
+
+                        <TextView
+                            android:id="@+id/card_credits"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:text="Credits"
+                            android:textColor="#444"
+                            android:textSize="17sp"
+                            android:drawablePadding="20dp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginEnd="9dp"
+                            android:layout_marginRight="9dp"
+                            android:background="#A9A9A9"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/card_acknowledgements"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:text="@string/acknowledgement"
+                            android:textColor="#444"
+                            android:textSize="17sp"
+                            android:drawablePadding="20dp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginEnd="9dp"
+                            android:layout_marginRight="9dp"
+                            android:background="#A9A9A9" />
+
+                        <TextView
+                            android:id="@+id/card_pending_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:text="@string/event_update"
+                            android:textColor="#444"
+                            android:textSize="17sp"
+                            android:layout_marginBottom="10dp"
+                            android:drawablePadding="20dp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+

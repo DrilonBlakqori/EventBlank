@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/speaker_detail_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_tab_height"
+        android:elevation="8dp"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:id="@+id/speaker_detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/speaker_details"
+            android:gravity="center"
+            style="@style/ToolbarText"
+            android:layout_centerInParent="true"
+            />
+
+        <ImageView
+            android:id="@+id/speaker_detail_back_navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:src="@mipmap/arrow_back"
+            />
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@id/android:empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        />
+
+    <ListView android:id="@id/android:list"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1"
+              android:divider="#e1e8ed"
+              android:dividerHeight="1dp"
+              android:drawSelectorOnTop="false"/>
+</LinearLayout>

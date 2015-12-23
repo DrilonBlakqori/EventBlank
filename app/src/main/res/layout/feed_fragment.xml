@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/feed_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/feed_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/feed_header"
+        android:overScrollMode="never" />
+
+    <RelativeLayout
+
+        android:id="@id/feed_header"
+        android:elevation="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_tab_height"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/feed_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="52dp"
+            android:layout_toStartOf="@+id/relative_image_container"
+            android:layout_toLeftOf="@id/relative_image_container"
+            android:singleLine="true"
+            app:tabGravity="fill"
+            app:tabIndicatorHeight="6dp"
+            style="@style/MyCustomTabLayout"
+            app:tabTextColor="#fff"
+            app:tabSelectedTextColor="#fff" />
+
+        <RelativeLayout
+            android:id="@+id/relative_image_container"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <ImageButton
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/image_twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/tw__ic_logo_default" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

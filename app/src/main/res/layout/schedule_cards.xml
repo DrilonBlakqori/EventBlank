@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:id="@+id/schedule_card_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginTop="7dp"
+    android:layout_marginLeft="7dp"
+    android:layout_marginRight="7dp"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="4dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:paddingRight="17dp"
+        android:paddingLeft="17dp">
+
+        <RelativeLayout
+            android:id="@+id/card_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/schedule_card_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_time"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:id="@+id/schedule_card_title"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/schedule_card_time"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/activity_name"
+                android:textSize="20sp"
+                android:layout_marginBottom="5dp"/>
+
+        </RelativeLayout>
+
+
+        <com.facebook.drawee.view.GenericDraweeView
+            android:id="@+id/schedule_card_profile_picture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_below="@id/card_header"
+            />
+
+        <LinearLayout
+            android:id="@+id/schedule_card_details"
+            android:layout_toEndOf="@id/schedule_card_profile_picture"
+            android:layout_toRightOf="@id/schedule_card_profile_picture"
+            android:layout_below="@id/card_header"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/schedule_card_speaker_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:text="@string/speaker_name"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/schedule_card_track"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/card_track"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/schedule_card_location"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/card_location"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/schedule_card_favourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/favourite_36"
+            android:padding="7dp"
+            android:clickable="false"
+            />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

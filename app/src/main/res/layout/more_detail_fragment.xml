@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/more_detail_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_tab_height"
+        android:elevation="10dp"
+        android:background="?attr/colorPrimary">
+
+        <ImageView
+            android:id="@+id/more_detail_back_navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:src="@mipmap/arrow_back"
+            />
+
+        <TextView
+            android:id="@+id/more_detail_header_text"
+            android:layout_width="wrap_content"
+            style="@style/ToolbarText"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <org.sufficientlysecure.htmltextview.HtmlTextView
+            android:padding="15dp"
+            android:paddingTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/more_details_text"
+            android:textSize="19sp"
+            />
+    </ScrollView>
+
+
+</LinearLayout>

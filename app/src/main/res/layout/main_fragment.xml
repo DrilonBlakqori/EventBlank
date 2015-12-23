@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_event_status"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_logo_holder"
+            android:gravity="center"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/main_logo"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:id="@+id/main_title_part"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:overScrollMode="never"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/main_event_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event_title"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="30sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/main_event_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event_subtitle"
+                    android:layout_below="@id/main_event_title"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/main_event_organized_by"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event_organized_by"
+                    android:layout_below="@id/main_event_subtitle"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/main_event_organizer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event_organizer"
+                    android:layout_below="@id/main_event_organized_by"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    />
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@id/main_event_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/event_status"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+
+
+</RelativeLayout>

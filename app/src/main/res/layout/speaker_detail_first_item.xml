@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/speaker_detail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#fff"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <TextView
+        android:id="@+id/speaker_speaker_details"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_tab_height"
+        android:text="SPEAKER DETAILS"
+        android:gravity="center_vertical|start"
+        android:paddingLeft="15dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/custom_speaker_border"
+        android:textStyle="bold"/>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.facebook.drawee.view.GenericDraweeView
+            android:id="@+id/speaker_detail_picture"
+            app:siBorderWidth="0dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/speaker_detail_name"
+            android:layout_toEndOf="@id/speaker_detail_picture"
+            android:layout_toRightOf="@id/speaker_detail_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/speaker_name"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/speaker_detail_speaker_twitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/speaker_detail_name"
+            android:layout_toEndOf="@id/speaker_detail_picture"
+            android:layout_toRightOf="@id/speaker_detail_picture"
+            android:textSize="14sp"
+            android:textColor="#3366BB"
+            android:text="@string/detail_twitter"
+            android:padding="4dp"
+            android:layout_margin="6dp"
+            />
+
+        <TextView
+            android:id="@+id/speaker_detail_speaker_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3366BB"
+            android:layout_below="@id/speaker_detail_speaker_twitter"
+            android:layout_toEndOf="@id/speaker_detail_picture"
+            android:layout_toRightOf="@id/speaker_detail_picture"
+            android:textSize="14sp"
+            android:text="@string/speaker_url"
+            android:layout_margin="6dp"
+            android:padding="4dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/speaker_detail_favourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:padding="7dp"
+            android:clickable="false"
+            android:src="@mipmap/favourite_36"
+            />
+
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/speaker_detail_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_description"
+        android:textSize="15sp"
+        android:paddingTop="5dp"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/speaker_latest_tweets"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_tab_height"
+        android:text="@string/latest_tweets"
+        android:gravity="center_vertical|start"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/custom_speaker_border"
+        android:textStyle="bold"/>
+
+
+
+</LinearLayout>

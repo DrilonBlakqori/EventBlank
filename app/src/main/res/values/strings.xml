@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Change the name of the app here-->
+    <string name="app_name">Change this!</string>
+
+    <!-- Put the correct name of your database here-->
+    <string name="database_name">ZagApps.eventblank</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="and">" and "</string>
+    <string name="activity_time">Activity time</string>
+    <string name="activity_name">Event activity</string>
+    <string name="speaker_name">Speaker Name</string>
+    <string name="activity_description">Description</string>
+    <string name="speakers_search">Search</string>
+    <string name="session_details">Session details</string>
+    <string name="back_navigation">Back</string>
+    <string name="more_fragment">More</string>
+    <string name="event_title">Event Title</string>
+    <string name="event_subtitle">Event Subtitle</string>
+    <string name="event_organized_by">organized by</string>
+    <string name="event_organizer">Organizer</string>
+    <string name="event_status">Event status</string>
+    <string name="schedule_detail_title">%1$s  %2$s</string>
+    <string name="event_finished">The event has already finished. You can still browse the speaker and sessions data in the app</string>
+    <string name="event_starting_in">The event starts in %1$d days!</string>
+    <string name="event_starting_within">Starting within hours, get ready!</string>
+    <string name="event_currently">Currently: %1$s by %2$s </string>
+    <string name="event_currently_and_next">Currently: %1$s by %2$s \nNext at %3$s: %4$s by %5$s</string>
+    <string name="event_next_session">Next at %1$s: %2$s by %3$s</string>
+    <string name="event_ongoing">The event is ongoing</string>
+    <string name="card_track">Track</string>
+    <string name="card_location">Location</string>
+    <string name="detail_twitter">Twitter</string>
+    <string name="speaker_url">Url</string>
+    <string name="web_name">Web name</string>
+    <string name="speaker_twitter">Speaker twitter</string>
+    <string name="no_tweets">No tweets!</string>
+    <string name="pull_to_refresh">Pull to refresh</string>
+    <string name="event_information">EVENT INFORMATION</string>
+    <string name="about">About</string>
+    <string name="code_of_conduct">Code of Conduct</string>
+    <string name="sponsors">Sponsors</string>
+    <string name="acknowledgement">Acknowledgements</string>
+    <string name="event_update">Pending Event Update</string>
+    <string name="latest_tweets">LATEST TWEETS</string>
+    <string name="speaker_details">Speaker Details</string>
+
+</resources>

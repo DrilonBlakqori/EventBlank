@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <RelativeLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:id="@+id/speakers_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_tab_height"
+        android:background="?attr/colorPrimary"
+        android:elevation="8dp"
+        >
+
+        <ImageView
+            android:id="@+id/speakers_search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/search"/>
+
+
+        <TextView
+            android:id="@+id/speakers_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/speakers_search"
+            style="@style/ToolbarText"
+            android:textAlignment="center"
+            android:layout_centerInParent="true"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/speakers_search_expanded_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/speakers_search_view_close"
+                android:layout_margin="10dp"
+                android:src="@mipmap/search"
+                android:clickable="false"
+                android:visibility="gone"
+                />
+
+
+            <EditText
+                android:id="@+id/speakers_search_edit_text"
+                android:inputType="textNoSuggestions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textAppearance="@style/SearchText"
+                android:layout_toLeftOf="@id/speakers_search_view_close"
+                android:visibility="gone"
+                android:imeOptions="actionGo"
+                android:layout_centerVertical="true"/>
+
+
+            <ImageView
+                android:id="@id/speakers_search_view_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/close"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:padding="10dp"
+                android:layout_centerVertical="true"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/speaker_favourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="center"
+            android:adjustViewBounds="false"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/speakers_recycler"
+        android:layout_below="@id/speakers_header"
+        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:overScrollMode="never">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
