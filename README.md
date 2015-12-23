@@ -7,7 +7,7 @@ It's an open source blueprint, which will allow creating an event/conference And
 ## Getting started
 
 ### 1. Start The project
-Download the latest version of Android Studio. Download this project as a zip file and add it as a project in Android Studio.
+Download the latest version of Android Studio. Download and add this project in Android Studio.
 
 ### 2. Add database
 If you already have the sqlite file generated from the iOS version, you can use that file for the Android version too.
