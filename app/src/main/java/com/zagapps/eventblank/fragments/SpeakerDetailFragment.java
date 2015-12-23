@@ -83,8 +83,8 @@ public class SpeakerDetailFragment extends ListFragment
                 urlBundle.putString(WebViewFragment.URL, mSpeaker.getSpeakerTwitter());
                 fragment.setArguments(urlBundle);
                 getFragmentManager().beginTransaction().addToBackStack(fragment.getClass().getSimpleName()).
-                        setCustomAnimations(R.anim.slide_in_left, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out_right).
-                        replace(R.id.speakersContainer, fragment, fragment.getClass().getSimpleName()).commit();
+                        setCustomAnimations(R.anim.slide_in_left,R.anim.no_anim, R.anim.no_anim, R.anim.slide_out_right).
+                        add(R.id.speakersContainer, fragment, fragment.getClass().getSimpleName()).commit();
 
             }
         });
@@ -102,8 +102,8 @@ public class SpeakerDetailFragment extends ListFragment
                 fragment.setArguments(urlBundle);
 
                 getFragmentManager().beginTransaction().addToBackStack(fragment.getClass().getSimpleName()).
-                        setCustomAnimations(R.anim.slide_in_left, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out_right).
-                        replace(R.id.speakersContainer, fragment, fragment.getClass().getSimpleName()).commit();
+                        setCustomAnimations(R.anim.slide_in_left,R.anim.no_anim, R.anim.no_anim, R.anim.slide_out_right).
+                        add(R.id.speakersContainer, fragment, fragment.getClass().getSimpleName()).commit();
             }
         });
 

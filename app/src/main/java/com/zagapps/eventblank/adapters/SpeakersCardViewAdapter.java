@@ -183,8 +183,8 @@ public class SpeakersCardViewAdapter extends RecyclerView.Adapter<SpeakersCardVi
                     fragment.setArguments(mBundle);
 
                     fragmentManager.beginTransaction().addToBackStack(fragment.getClass().getSimpleName()).
-                        setCustomAnimations(R.anim.slide_in_left, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out_right).
-                        replace(R.id.speakersContainer, fragment, fragment.getClass().getSimpleName()).
+                        setCustomAnimations(R.anim.slide_in_left,R.anim.no_anim, R.anim.no_anim, R.anim.slide_out_right).
+                        add(R.id.speakersContainer, fragment, fragment.getClass().getSimpleName()).
                             commit();
 
                 }

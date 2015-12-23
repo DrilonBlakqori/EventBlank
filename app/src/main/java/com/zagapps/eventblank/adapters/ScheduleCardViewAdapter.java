@@ -247,8 +247,8 @@ public class ScheduleCardViewAdapter extends RecyclerView.Adapter<ScheduleCardVi
                     FragmentTransaction transaction=mFragmentManager.beginTransaction();
 
                     transaction.addToBackStack(fragment.getClass().getSimpleName()).
-                            setCustomAnimations(R.anim.slide_in_left,R.anim.fade_out, R.anim.fade_in, R.anim.slide_out_right).
-                            replace(R.id.scheduleContainer, fragment,fragment.getClass().getSimpleName()).commit();
+                            setCustomAnimations(R.anim.slide_in_left,R.anim.no_anim, R.anim.no_anim, R.anim.slide_out_right).
+                            add(R.id.scheduleContainer, fragment, fragment.getClass().getSimpleName()).commit();
                 }
             });
         }

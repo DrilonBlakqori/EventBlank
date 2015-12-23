@@ -72,8 +72,8 @@ public class MoreFragment extends Fragment {
                 bundle.putInt(MORE_ITEM, 0);
                 fragment.setArguments(bundle);
                 getFragmentManager().beginTransaction().addToBackStack(fragment.getClass().getSimpleName()).
-                        setCustomAnimations(R.anim.slide_in_left, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out_right).
-                        replace(R.id.moreContainer, fragment).commit();
+                        setCustomAnimations(R.anim.slide_in_left,R.anim.no_anim, R.anim.no_anim, R.anim.slide_out_right).
+                        add(R.id.moreContainer, fragment).commit();
             }
         });
 
@@ -85,8 +85,8 @@ public class MoreFragment extends Fragment {
                 bundle.putInt(MORE_ITEM, 1);
                 fragment.setArguments(bundle);
                 getFragmentManager().beginTransaction().addToBackStack(fragment.getClass().getSimpleName()).
-                        setCustomAnimations(R.anim.slide_in_left, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out_right).
-                        replace(R.id.moreContainer, fragment).commit();
+                        setCustomAnimations(R.anim.slide_in_left,R.anim.no_anim, R.anim.no_anim, R.anim.slide_out_right).
+                        add(R.id.moreContainer, fragment).commit();
             }
         });
 
@@ -98,8 +98,8 @@ public class MoreFragment extends Fragment {
                 bundle.putInt(MORE_ITEM, 2);
                 fragment.setArguments(bundle);
                 getFragmentManager().beginTransaction().addToBackStack(fragment.getClass().getSimpleName()).
-                        setCustomAnimations(R.anim.slide_in_left, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out_right).
-                        replace(R.id.moreContainer, fragment).commit();
+                        setCustomAnimations(R.anim.slide_in_left,R.anim.no_anim, R.anim.no_anim, R.anim.slide_out_right).
+                        add(R.id.moreContainer, fragment).commit();
             }
         });
 
@@ -111,8 +111,8 @@ public class MoreFragment extends Fragment {
                 bundle.putInt(MORE_ITEM, 3);
                 fragment.setArguments(bundle);
                 getFragmentManager().beginTransaction().addToBackStack(fragment.getClass().getSimpleName()).
-                        setCustomAnimations(R.anim.slide_in_left, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out_right).
-                        replace(R.id.moreContainer, fragment).commit();
+                        setCustomAnimations(R.anim.slide_in_left,R.anim.no_anim, R.anim.no_anim, R.anim.slide_out_right).
+                        add(R.id.moreContainer, fragment).commit();
             }
         });
 

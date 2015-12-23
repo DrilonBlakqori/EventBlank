@@ -14,9 +14,7 @@ import android.text.style.CharacterStyle;
 import com.zagapps.eventblank.R;
 import com.zagapps.eventblank.fragments.WebViewFragment;
 
-/**
- * Created by Kushtrim on 16.12.2015.
- */
+
 public class Utils {
 
     private Utils() {
@@ -31,7 +29,7 @@ public class Utils {
         fragment.setArguments(urlBundle);
 
         fragmentManager.beginTransaction().addToBackStack(fragment.getClass().getSimpleName())
-                .setCustomAnimations(R.anim.slide_in_left, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out_right)
+                .setCustomAnimations(R.anim.slide_in_left,R.anim.no_anim, R.anim.no_anim, R.anim.slide_out_right)
                 .add(R.id.moreContainer, fragment, fragment.getClass().getSimpleName()).commit();
     }
 

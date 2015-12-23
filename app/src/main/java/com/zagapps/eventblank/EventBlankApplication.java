@@ -8,9 +8,7 @@ import com.twitter.sdk.android.core.TwitterAuthConfig;
 
 import io.fabric.sdk.android.Fabric;
 
-/**
- * Created by Kushtrim on 15.12.2015.
- */
+
 public class EventBlankApplication extends Application {
 
     // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
