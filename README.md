@@ -22,3 +22,6 @@ Setup your launcher icons (you can use[Launcher Icon Generator](http://romannuri
 
 ### 5. Run App
 Run the app in Android Studio and enjoy your own application!!
+
+Image:
+![alt text](http://i.imgur.com/dsKRoiS.png "Logo Title Text 1")
