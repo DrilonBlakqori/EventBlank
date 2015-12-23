@@ -1,6 +1,6 @@
 # EventBlank for Android
 
-This is the android version of the EventBlankApp for iOS.
+This is the android version of the EventBlankApp for iOS. Find the iOS version here: https://github.com/icanzilb/EventBlankApp
 
 It's an open source blueprint, which will allow creating an event/conference Android app in a matter of ~ 1 hour. The project The project will aim to have as few as possible dependanies so that it can be cloned from GitHub and built immediately.
 
