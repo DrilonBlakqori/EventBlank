@@ -12,7 +12,7 @@ Download the latest version of Android Studio. Download and add this project in 
 ### 2. Add database
 Download the sqlite schema [here](https://www.dropbox.com/s/t3wea9u9ye7ad68/EventBlank.eventblank?dl=1), and fill it with your event data using SQLite Browser or any other SQLite bowsing programs.
 You may also use the EventBlankProducer to generate the file or if you already have your iOS version App use the same SQLite file here.
-Copy the file in the specific directory:"yourProjectDirectory\EventBlank\app\src\main\assets\databases\".
+Copy the file in the specific directory:("yourProjectDirectory\EventBlank\app\src\main\assets\databases\").
 
 ### 3. Change names
 Open the project in Android Studio. In the package explorer find the values folder ("src\main\res\values\") and open the strings.xml file. Put the correct name of your app under the app_name tag and the correct name of your sqlite file under dataase_name.
