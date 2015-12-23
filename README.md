@@ -18,12 +18,7 @@ Copy the file in the specific directory:"yourProjectDirectory\EventBlank\app\src
 Open the project in Android Studio. In the package explorer find the values folder ("src\main\res\values\") and open the strings.xml file. Put the correct name of your app under the app_name tag and the correct name of your sqlite file under dataase_name.
 
 ### 4. Launcher icon
-Get your launcher icon, rename it to "ic_launcher" and put it in the correct mipmap folder (src\main\res\mipmap).
-*   mdpi folder for  48x48 pixel icons
-*   hdpi folder for  72x72 pixel icons
-*   xhdpi folder for  96x96 pixel icons
-*   xxhdpi folder for  144x144 pixel icons
-*   xxxhdpi folder for  192x192 pixel icons
+Setup your launcher icons using (Launcher Icon Generator)[http://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.space.trim=1&foreground.space.pad=0&foreColor=607d8b%2C0&crop=0&backgroundShape=square&backColor=ffffff%2C100&effects=none]
 
 ### 5. Run App
 Run the app in Android Studio and enjoy your own application!!
