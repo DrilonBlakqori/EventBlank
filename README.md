@@ -18,7 +18,15 @@ Copy the file in the specific directory:("yourProjectDirectory\EventBlank\app\sr
 Open the project in Android Studio. In the package explorer find the values folder ("src\main\res\values\") and open the strings.xml file. Put the correct name of your app under the app_name tag and the correct name of your sqlite file under dataase_name.
 
 ### 4. Launcher icon
-Setup your launcher icons (you can use[Launcher Icon Generator](http://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.space.trim=1&foreground.space.pad=0&foreColor=607d8b%2C0&crop=0&backgroundShape=square&backColor=ffffff%2C100&effects=none)). Upload your icon and download the new generated icons. Copy the generated icons in the specific mipmap folders ("src\main\res\mipmap-*"). 
+Setup your launcher icons (you can use[Launcher Icon Generator](http://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.space.trim=1&foreground.space.pad=0&foreColor=607d8b%2C0&crop=0&backgroundShape=square&backColor=ffffff%2C100&effects=none)). Upload your icon and download the new generated icons. Copy the generated icons in the specific mipmap folders ("src\main\res\mipmap-*") and delete the default existing ones. 
 
 ### 5. Run App
 Run the app in Android Studio and enjoy your own application!!
+
+At the end your app should look something like this:
+![alt text](http://i.imgur.com/GNN0CSH.png "Main Fragment")
+![alt text](http://i.imgur.com/xd9Fgan.png "Schedule Fragment")
+![alt text](http://i.imgur.com/DWOjYHb.png "Feed Fragment")
+![alt text](http://i.imgur.com/1OJXrde.png "Speakers Fragment")
+![alt text](http://i.imgur.com/v0DCNb5.png "More Fragment")
+![alt text](http://i.imgur.com/TS0PgdV.png "Credits Fragment")
