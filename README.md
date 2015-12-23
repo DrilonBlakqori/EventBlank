@@ -23,5 +23,10 @@ Setup your launcher icons (you can use[Launcher Icon Generator](http://romannuri
 ### 5. Run App
 Run the app in Android Studio and enjoy your own application!!
 
-Image:
-![alt text](http://i.imgur.com/dsKRoiS.png "Logo Title Text 1")
+At the end your app should look something like this:
+![alt text](http://i.imgur.com/GNN0CSH.png "Main Fragment")
+![alt text](http://i.imgur.com/xd9Fgan.png "Schedule Fragment")
+![alt text](http://i.imgur.com/DWOjYHb.png "Feed Fragment")
+![alt text](http://i.imgur.com/1OJXrde.png "Speakers Fragment")
+![alt text](http://i.imgur.com/v0DCNb5.png "More Fragment")
+![alt text](http://i.imgur.com/TS0PgdV.png "Credits Fragment")
