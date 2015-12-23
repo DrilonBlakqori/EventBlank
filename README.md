@@ -1,8 +1,8 @@
 # EventBlank for Android
 
-This is the android version of the EventBlankApp for iOS. Find the iOS version [here](https://github.com/icanzilb/EventBlankApp)
+This is the android version of the EventBlankApp. Find the iOS version [here](https://github.com/icanzilb/EventBlankApp)
 
-It's an open source blueprint, which will allow creating an event/conference Android app in a matter of ~ 1 hour. The project will aim to have as few as possible dependanies so that it can be cloned from GitHub and built immediately.
+It's an open source blueprint, which will allow you to create your own event/conference Android app in a matter of ~ 1 hour. The project will aim to have as few as possible dependanies so that it can be cloned from GitHub and built immediately.
 
 ## Getting started
 
@@ -18,8 +18,7 @@ Copy the file in the specific directory:("yourProjectDirectory\EventBlank\app\sr
 Open the project in Android Studio. In the package explorer find the values folder ("src\main\res\values\") and open the strings.xml file. Put the correct name of your app under the app_name tag and the correct name of your sqlite file under dataase_name.
 
 ### 4. Launcher icon
-Setup your launcher icons using [Launcher Icon Generator](http://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.space.trim=1&foreground.space.pad=0&foreColor=607d8b%2C0&crop=0&backgroundShape=square&backColor=ffffff%2C100&effects=none). Upload your icon and download the new generated icons. Copy the generated icons in the specific mipmap folders ("src\main\res\mipmap-*"). 
+Setup your launcher icons (you can use[Launcher Icon Generator](http://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.space.trim=1&foreground.space.pad=0&foreColor=607d8b%2C0&crop=0&backgroundShape=square&backColor=ffffff%2C100&effects=none)). Upload your icon and download the new generated icons. Copy the generated icons in the specific mipmap folders ("src\main\res\mipmap-*"). 
 
 ### 5. Run App
 Run the app in Android Studio and enjoy your own application!!
-
