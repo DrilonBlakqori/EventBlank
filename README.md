@@ -25,4 +25,4 @@ Run the app in Android Studio and enjoy your own application!!
 
 Finaly your app should look something like this:
 
-![alt text](http://i.imgur.com/uz97UOA.gifv "Demo app")
+![alt text](http://i.imgur.com/uz97UOA.gif "Demo app")
