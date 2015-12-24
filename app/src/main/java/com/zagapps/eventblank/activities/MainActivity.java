@@ -121,6 +121,7 @@ public class MainActivity extends AppCompatActivity
                     public void onTabSelected(TabLayout.Tab tab)
                     {
                         super.onTabSelected(tab);
+                        lastTabSeleced=tab.getPosition();
                         if(mTabLayout!=null && mTabLayout.getTabAt(tab.getPosition())!=null)
                             mTabLayout.getTabAt(tab.getPosition()).setIcon(mSelected[tab.getPosition()]);
 

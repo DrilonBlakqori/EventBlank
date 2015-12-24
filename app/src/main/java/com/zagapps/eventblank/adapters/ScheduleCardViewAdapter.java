@@ -24,6 +24,7 @@ import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
 import com.facebook.drawee.generic.RoundingParams;
 import com.facebook.drawee.view.GenericDraweeView;
+import com.zagapps.eventblank.events.BackStackChanged;
 import com.zagapps.eventblank.fragments.ScheduleDetailFragment;
 import com.zagapps.eventblank.models.Locations;
 import com.zagapps.eventblank.models.ModelManager;
@@ -33,6 +34,8 @@ import com.zagapps.eventblank.models.Tracks;
 import com.zagapps.eventblank.R;
 
 import java.util.ArrayList;
+
+import de.greenrobot.event.EventBus;
 
 
 public class ScheduleCardViewAdapter extends RecyclerView.Adapter<ScheduleCardViewAdapter.ViewHolder>
@@ -44,6 +47,7 @@ public class ScheduleCardViewAdapter extends RecyclerView.Adapter<ScheduleCardVi
     private boolean mIsFavouriteActivated;
     private Drawable likeFull;
     private Drawable likeEmpty;
+    private EventBus mEventBus= EventBus.getDefault();
 
     public static final String SESSION_ID="session_id";
     private int mPosition;
@@ -125,7 +129,7 @@ public class ScheduleCardViewAdapter extends RecyclerView.Adapter<ScheduleCardVi
         }
 
         final Animation shakeUp= AnimationUtils.loadAnimation(mActivity,R.anim.image_shake_up);
-        final Animation shakeDown= AnimationUtils.loadAnimation(mActivity,R.anim.image_shake_down);
+        final Animation shakeDown= AnimationUtils.loadAnimation(mActivity, R.anim.image_shake_down);
         shakeUp.setAnimationListener(new Animation.AnimationListener()
         {
             @Override
@@ -207,7 +211,25 @@ public class ScheduleCardViewAdapter extends RecyclerView.Adapter<ScheduleCardVi
         notifyDataSetChanged();
     }
 
+    public void onEvent(BackStackChanged backStackChanged)
+    {
+        notifyDataSetChanged();
+    }
 
+    @Override
+    public void onDetachedFromRecyclerView(RecyclerView recyclerView)
+    {
+        super.onDetachedFromRecyclerView(recyclerView);
+        mEventBus.unregister(this);
+
+    }
+
+    @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView)
+    {
+        super.onAttachedToRecyclerView(recyclerView);
+        mEventBus.register(this);
+    }
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder

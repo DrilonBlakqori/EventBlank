@@ -30,9 +30,12 @@ import com.facebook.drawee.view.GenericDraweeView;
 import com.twitter.sdk.android.tweetui.TweetTimelineListAdapter;
 import com.twitter.sdk.android.tweetui.UserTimeline;
 import com.zagapps.eventblank.adapters.SpeakersCardViewAdapter;
+import com.zagapps.eventblank.events.BackStackChanged;
 import com.zagapps.eventblank.models.ModelManager;
 import com.zagapps.eventblank.models.Speakers;
 import com.zagapps.eventblank.R;
+
+import de.greenrobot.event.EventBus;
 
 public class SpeakerDetailFragment extends ListFragment
 {
@@ -42,6 +45,7 @@ public class SpeakerDetailFragment extends ListFragment
     private Drawable likeFull;
     private Drawable likeEmpty;
     private TextView mTitle;
+    private EventBus mEventBus=EventBus.getDefault();
 
 
     @Nullable
@@ -175,11 +179,13 @@ public class SpeakerDetailFragment extends ListFragment
                     favouriteImage.setActivated(true);
                     favouriteImage.startAnimation(shakeUp);
                     ModelManager.get(getActivity()).favouriteSpeakerChanged(mSpeaker.getIDSpeaker(), true);
+                    mEventBus.post(new BackStackChanged());
                 } else
                 {
                     favouriteImage.setActivated(false);
                     favouriteImage.startAnimation(shakeUp);
                     ModelManager.get(getActivity()).favouriteSpeakerChanged(mSpeaker.getIDSpeaker(), false);
+                    mEventBus.post(new BackStackChanged());
                 }
             }
         });

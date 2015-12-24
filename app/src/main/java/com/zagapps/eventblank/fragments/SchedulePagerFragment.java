@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.zagapps.eventblank.adapters.SchedulePagerAdapter;
+import com.zagapps.eventblank.events.BackStackChanged;
 import com.zagapps.eventblank.events.FavouriteSessionFilter;
 import com.zagapps.eventblank.models.ModelManager;
 import com.zagapps.eventblank.R;
@@ -65,7 +67,22 @@ public class SchedulePagerFragment extends Fragment
 
 
         mFavouriteFilter =(ImageView)view.findViewById(R.id.schedule_favourite_image);
+        setupFavouriteFilter();
 
+        getFragmentManager().addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener()
+        {
+            @Override
+            public void onBackStackChanged()
+            {
+                mEventBus.post(new BackStackChanged());
+            }
+        });
+
+        return view;
+    }
+
+    private void setupFavouriteFilter()
+    {
         if(mFavouriteSessionBus !=null && mFavouriteSessionBus.isFavourite())
         {
             mFavouriteFilter.setImageDrawable(likeFull);
@@ -114,22 +131,18 @@ public class SchedulePagerFragment extends Fragment
                 {
                     mFavouriteFilter.setActivated(true);
                     mFavouriteFilter.startAnimation(shakeUp);
-                    mFavouriteSessionBus =new FavouriteSessionFilter(true);
+                    mFavouriteSessionBus = new FavouriteSessionFilter(true);
                     mEventBus.post(mFavouriteSessionBus);
 
-                }
-                else
+                } else
                 {
                     mFavouriteFilter.setActivated(false);
                     mFavouriteFilter.startAnimation(shakeUp);
-                    mFavouriteSessionBus =new FavouriteSessionFilter(false);
+                    mFavouriteSessionBus = new FavouriteSessionFilter(false);
                     mEventBus.post(mFavouriteSessionBus);
                 }
             }
 
         });
-
-
-        return view;
     }
 }

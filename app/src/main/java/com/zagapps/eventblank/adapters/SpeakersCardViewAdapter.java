@@ -20,12 +20,15 @@ import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
 import com.facebook.drawee.generic.RoundingParams;
 import com.facebook.drawee.view.GenericDraweeView;
+import com.zagapps.eventblank.events.BackStackChanged;
 import com.zagapps.eventblank.fragments.SpeakerDetailFragment;
 import com.zagapps.eventblank.models.ModelManager;
 import com.zagapps.eventblank.models.Speakers;
 import com.zagapps.eventblank.R;
 
 import java.util.ArrayList;
+
+import de.greenrobot.event.EventBus;
 
 
 public class SpeakersCardViewAdapter extends RecyclerView.Adapter<SpeakersCardViewAdapter.ViewHolder>
@@ -38,6 +41,7 @@ public class SpeakersCardViewAdapter extends RecyclerView.Adapter<SpeakersCardVi
     private boolean isFavourite;
     private Activity mActivity;
     public static final String SPEAKER_ID="speakers_id";
+    private EventBus mEventBus=EventBus.getDefault();
 
     public SpeakersCardViewAdapter(Activity activity, FragmentManager fragmentManager)
     {
@@ -154,6 +158,25 @@ public class SpeakersCardViewAdapter extends RecyclerView.Adapter<SpeakersCardVi
         notifyDataSetChanged();
     }
 
+    public void onEvent(BackStackChanged backStackChanged)
+    {
+        notifyDataSetChanged();
+    }
+
+    @Override
+    public void onDetachedFromRecyclerView(RecyclerView recyclerView)
+    {
+        super.onDetachedFromRecyclerView(recyclerView);
+        mEventBus.unregister(this);
+
+    }
+
+    @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView)
+    {
+        super.onAttachedToRecyclerView(recyclerView);
+        mEventBus.register(this);
+    }
 
     public static class ViewHolder extends RecyclerView.ViewHolder
     {
