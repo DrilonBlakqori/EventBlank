@@ -27,6 +27,7 @@ import com.zagapps.eventblank.utils.NonSlideViewPager;
 
 
 
+@SuppressWarnings("ConstantConditions")
 public class MainActivity extends AppCompatActivity
 {
 
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity
     public  Drawable[] mUnselected =new Drawable[imageResId.length];
     public  Drawable[] mSelected=new Drawable[imageResId.length];
 
-    private int lastTabSeleced;
+    private int lastTabSelected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -108,7 +109,7 @@ public class MainActivity extends AppCompatActivity
                                 findFragmentByTag(SpeakerDetailFragment.class.getSimpleName());
                         ScheduleDetailFragment scheduleDetailFragment=(ScheduleDetailFragment)getSupportFragmentManager().
                                 findFragmentByTag(ScheduleDetailFragment.class.getSimpleName());
-                        lastTabSeleced=tab.getPosition();
+                        lastTabSelected =tab.getPosition();
 
                         if((speakerDetailFragment!=null && tab.getPosition()==3)
                                 || (scheduleDetailFragment!=null&& tab.getPosition()==1))
@@ -121,7 +122,7 @@ public class MainActivity extends AppCompatActivity
                     public void onTabSelected(TabLayout.Tab tab)
                     {
                         super.onTabSelected(tab);
-                        lastTabSeleced=tab.getPosition();
+                        lastTabSelected =tab.getPosition();
                         if(mTabLayout!=null && mTabLayout.getTabAt(tab.getPosition())!=null)
                             mTabLayout.getTabAt(tab.getPosition()).setIcon(mSelected[tab.getPosition()]);
 
@@ -195,13 +196,13 @@ public class MainActivity extends AppCompatActivity
         else
         if(speakerDetailFragment!=null && scheduleDetailFragment!=null)
         {
-            if(lastTabSeleced==1)
+            if(lastTabSelected ==1)
             {
                 getSupportFragmentManager().popBackStackImmediate(scheduleDetailFragment.getClass().
                         getSimpleName(), FragmentManager.POP_BACK_STACK_INCLUSIVE);
             }
             else
-            if(lastTabSeleced==3)
+            if(lastTabSelected ==3)
             {
                 getSupportFragmentManager().popBackStackImmediate(speakerDetailFragment.getClass().
                         getSimpleName(), FragmentManager.POP_BACK_STACK_INCLUSIVE);
