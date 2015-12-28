@@ -11,6 +11,7 @@ import org.markdown4j.Markdown4jProcessor;
 
 import com.zagapps.eventblank.database.EventDatabase;
 import com.zagapps.eventblank.receivers.NotificationReceiver;
+import com.zagapps.eventblank.services.AlarmService;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -55,8 +56,8 @@ public class ModelManager
             texts.setContent(stringToHtml(texts.getContent()));
         }
 
-        SetupAlarms setupAlarms=new SetupAlarms();
-        setupAlarms.execute();
+        Intent pushIntent=new Intent(context, AlarmService.class);
+        context.startService(pushIntent);
     }
 
 
@@ -243,27 +244,12 @@ public class ModelManager
         return html;
     }
 
-    private class SetupAlarms extends AsyncTask<Void,Void,Void>
+    public ArrayList<Sessions> getSessions()
     {
-        @Override
-        protected Void doInBackground(Void... params)
-        {
-            AlarmManager alarmManager = (AlarmManager)mContext.getSystemService(Activity.ALARM_SERVICE);
-
-            for(int i=0;i<mSessions.size();i++)
-            {
-                Sessions session= mSessions.get(i);
-
-                Intent myIntent = new Intent(mContext, NotificationReceiver.class);
-                myIntent.putExtra(NotificationReceiver.SESSION_ID,session.getID());
-                PendingIntent pendingIntent = PendingIntent.getBroadcast(mContext, i , myIntent,PendingIntent.FLAG_ONE_SHOT);
-
-                if(session.getBeginTime() -10 *60* 1000 >= System.currentTimeMillis())
-                    alarmManager.set(AlarmManager.RTC,session.getBeginTime()- 10 *60 *1000 , pendingIntent);
-            }
-            return null;
-        }
+        return mSessions;
     }
+
+
 
 
     private class WriteSessionFavourites extends AsyncTask <Integer,Void,Void>

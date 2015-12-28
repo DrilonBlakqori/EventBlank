@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.zagapps.eventblank.R;
-import com.zagapps.eventblank.UpdateService;
+import com.zagapps.eventblank.services.UpdateService;
 import com.zagapps.eventblank.models.ModelManager;
 
 

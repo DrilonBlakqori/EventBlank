@@ -46,6 +46,13 @@
             </intent-filter>
         </receiver>
 
+        <receiver android:name=".receivers.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".services.AlarmService"/>
 
         <receiver android:name=".receivers.NotificationReceiver" />
 
@@ -54,7 +61,7 @@
             android:value="105e1cf3d4c5dc609decc924507ce9620c28c327" />
 
         <service
-            android:name=".UpdateService"
+            android:name=".services.UpdateService"
             android:enabled="true" />
     </application>
 
