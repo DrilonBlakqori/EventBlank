@@ -1,4 +1,4 @@
-package com.zagapps.eventblank;
+package com.zagapps.eventblank.services;
 
 import android.app.AlarmManager;
 import android.app.Notification;
@@ -19,6 +19,7 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 import com.squareup.okhttp.ResponseBody;
+import com.zagapps.eventblank.R;
 import com.zagapps.eventblank.activities.MainActivity;
 import com.zagapps.eventblank.models.ModelManager;
 
