@@ -26,7 +26,7 @@ public class AlarmService extends Service
     @Override
     public int onStartCommand(Intent intent, int flags, int startId)
     {
-        mSessions=ModelManager.get(this).getSessions();
+        mSessions=ModelManager.get(getApplicationContext()).getSessions();
         SetupAlarms setupAlarms=new SetupAlarms();
         setupAlarms.execute();
         return super.onStartCommand(intent, flags, startId);
@@ -48,7 +48,6 @@ public class AlarmService extends Service
             AlarmManager alarmManager = (AlarmManager)getSystemService(Activity.ALARM_SERVICE);
 
 
-
             for(int i=0;i<mSessions.size();i++)
             {
                 Sessions session= mSessions.get(i);
@@ -62,11 +61,12 @@ public class AlarmService extends Service
             return null;
         }
 
-        @Override
-        protected void onPostExecute(Void aVoid)
-        {
-            Toast.makeText(getApplicationContext(),"Alarm registered",Toast.LENGTH_SHORT).show();
-            super.onPostExecute(aVoid);
-        }
+//
+//        @Override
+//        protected void onPostExecute(Void aVoid)
+//        {
+//            Toast.makeText(getApplicationContext(),"Alarms registered",Toast.LENGTH_LONG).show();
+//            super.onPostExecute(aVoid);
+//        }
     }
 }

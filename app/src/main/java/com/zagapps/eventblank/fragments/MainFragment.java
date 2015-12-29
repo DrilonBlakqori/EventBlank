@@ -101,8 +101,8 @@ public class MainFragment extends Fragment
                     if(rightNow <session.getBeginTime() && i==0)
                     {
                         mEventStatus.setText(String.format(getResources().getString(R.string.event_next_session),
-                                session.getTitle(),
                                 ModelManager.getDate(session.getBeginTime(), "h:mm a"),
+                                session.getTitle(),
                                 ModelManager.get(getActivity()).getSpeakerById(session.getFkSpeaker()).getName()));
                         return;
                     }

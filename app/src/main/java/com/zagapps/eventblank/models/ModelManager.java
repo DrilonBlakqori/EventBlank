@@ -35,7 +35,7 @@ public class ModelManager
 
     private boolean mFavouriteFilter;
 
-    public static final int DAY_TO_MILLIS=86400000;
+    public static final int DAY_TO_MILLIS=24*60*60*1000;
 
     private static ModelManager sModelManager;
 
@@ -183,9 +183,13 @@ public class ModelManager
                 endTime=sessions.getBeginTime();
         }
 
-        int length=Integer.parseInt(getDate(endTime,"dd"))-Integer.parseInt(getDate(beginTime,"dd"));
-        if(Integer.parseInt(getDate(endTime,"HH"))!=0)
+        int length=0;
+
+        while(beginTime<=endTime)
+        {
             length++;
+            beginTime+=DAY_TO_MILLIS;
+        }
 
         return  length;
     }
