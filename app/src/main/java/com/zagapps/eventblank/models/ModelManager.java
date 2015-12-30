@@ -185,6 +185,10 @@ public class ModelManager
 
         int length=0;
 
+        Calendar calendar=Calendar.getInstance();
+        calendar.setTimeInMillis(beginTime);
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        beginTime=calendar.getTimeInMillis();
         while(beginTime<=endTime)
         {
             length++;
